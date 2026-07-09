@@ -48,6 +48,12 @@ Projeto_Final_ETL/
   
 ## Resultado
 Dados processados e armazenados em formato Parquet para consumo analítico.
+<img width="950" height="475" alt="airflow" src="https://github.com/user-attachments/assets/f6e25599-a06f-428d-9006-680f75618f14" />
+
+<img width="952" height="496" alt="airflow2" src="https://github.com/user-attachments/assets/b8991204-7752-4345-86e2-3d5647da5d52" />
+
+<img width="1002" height="415" alt="airflow3" src="https://github.com/user-attachments/assets/c524b645-464c-448d-bcde-806086b6b1a7" />
+
 
 
 
