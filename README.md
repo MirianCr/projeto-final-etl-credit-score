@@ -4,15 +4,30 @@
 Construir um pipeline ETL automatizado para processamento de dados financeiros utilizando o dataset Credit Score Classification.
 
 ## Arquitetura
-Kaggle
-↓
-CSV
-↓
-PySpark
-↓
-Parquet
-↓
-AWS S3
+Credit Score Classification
+                               (Kaggle)
+                                   │
+                                   ▼
+                        Extract (CSV Local)
+                                   │
+                                   ▼
+                             Raw Layer
+                         data/raw/train.csv
+                                   │
+                                   ▼
+                      Transform (PySpark/Pandas)
+                                   │
+                                   ▼
+                   Data Quality & Validation Layer
+                                   │
+                                   ▼
+                   Processed Layer (Parquet)
+                                   │
+                                   ▼
+                        AWS S3 Data Lake
+                                   │
+                                   ▼
+                             Power BI
 
 📋 Principais Características dos Dados
 Fonte Oficial:https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) Importei dos dados do CSV
@@ -55,7 +70,7 @@ s3://data-girls-finance-mirian/
 └── README.md
 
 
-Armazenamento em Nuvem (AWS S3)
+## Armazenamento em Nuvem (AWS S3)
 Foi criado um bucket AWS S3 chamado:
 
 data-girls-finance-mirian
@@ -66,7 +81,27 @@ Os dados tratados foram armazenados na camada processed em formato Parquet, perm
 
 
 
-## scripts 
+## Automação com Apache Airflow
+
+A orquestração do pipeline foi realizada utilizando Apache Airflow executado em ambiente Docker.
+
+A DAG `credit_score_pipeline` possui três tarefas:
+
+### Extract
+Responsável por validar e disponibilizar os dados de entrada para processamento.
+
+### Transform
+Responsável pela limpeza, padronização, validação e geração do arquivo Parquet.
+
+### Load
+Responsável pela carga dos dados processados para armazenamento em nuvem e disponibilização para consumo analítico.
+
+Fluxo:
+
+extract → transform → load
+``
+
+
 extract
 
 <img width="606" height="297" alt="extract" src="https://github.com/user-attachments/assets/7d4262c9-5683-4394-bd6e-922ac6ba801d" />
@@ -99,14 +134,21 @@ Dados processados e armazenados em formato Parquet para consumo analítico.
 
 
 
-## Opcional – Bônus
-Integração com um Painel no Power BI
-• Conectei o banco e arquivos tratados com uma visualização (exportar
-dashboard);
-• Criei um dashboard simples com métricas como:
-o Total de clientes cadastrados;
-o Distribuição dos clientes por classificação de Score de Crédito;
-o Distribuição da renda mensal por categoria de score.
+## Dashboard Power BI
+
+Foi desenvolvido um dashboard conectado ao arquivo
+credit_score.parquet gerado pelo pipeline ETL.
+
+Principais indicadores:
+
+- Total de Clientes
+- Renda Média
+- Dívida Média
+- Número de Empréstimos
+- Distribuição dos Clientes por Credit Score
+- Distribuição da Renda Mensal por Categoria de Score
+- 
+
 
 Página 1 – Visão Geral
 Cards:
