@@ -70,6 +70,8 @@ s3://data-girls-finance-mirian/
 
 └── processed/
 
+| powerBI
+
 │
 └── README.md
 
@@ -151,25 +153,42 @@ Principais indicadores:
 - Número de Empréstimos
 - Distribuição dos Clientes por Credit Score
 - Distribuição da Renda Mensal por Categoria de Score
-- 
+  <img width="1912" height="1015" alt="bi 1" src="https://github.com/user-attachments/assets/0464bbe9-ed5e-49c8-8158-c7f34f1597a2" />
 
-
-Página 1 – Visão Geral
+  Página 1 – Visão Geral
+  
 Cards:
-Total de Clientes
-Renda Média
-Dívida Média
-Número de Empréstimos
-Página 2 – Crédito
-Gráficos:
-Clientes por Credit Score
-Credit Score por Occupation
-Credit Score por faixa de renda
+
+- Total de Clientes
+- Renda Média
+- Dívida Média
+- Número de Empréstimos
+
+  <img width="1877" height="962" alt="bi 2" src="https://github.com/user-attachments/assets/f46802dc-447b-410b-b755-c291409e92e3" />
+
+  Página 2 – Crédito
+  
+Gráficos: 
+
+- Clientes por Credit Score
+- Credit Score por Occupation
+- Credit Score por faixa de renda
+
+  <img width="1840" height="955" alt="bi 3" src="https://github.com/user-attachments/assets/3562366e-9664-474a-b120-1c70dea674e7" />
+
+  
 Página 3 – Financeiro
+
 Gráficos:
-Outstanding Debt
-Monthly Balance
-Credit Utilization Ratio
+
+- Outstanding Debt
+- Monthly Balance
+- Credit Utilization Ratio
+
+  <img width="1797" height="967" alt="bi 4" src="https://github.com/user-attachments/assets/16932a03-0844-4e78-b175-2dbd0625bccb" />
+
+
+
 
 
 
@@ -260,25 +279,5 @@ s3://credit-score/
 │
 └── logs/
 
-## Descrição das camadas
 
-
-## Raw (Bronze):
-
-Armazena os dados exatamente como recebidos da fonte.
-Preserva o histórico original para auditoria e reprocessamentos.
-
-
-
-## Processed (Silver):
-
-Contém dados tratados, validados e padronizados.
-Utilizados para análises, dashboards e modelos de Machine Learning.
-
-
-
-## Logs:
-
-Registra informações sobre execuções do pipeline.
-Auxilia no monitoramento, troubleshooting e governança dos processos.
 
