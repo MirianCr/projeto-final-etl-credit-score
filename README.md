@@ -40,11 +40,27 @@ Projeto_Final_ETL/
 │
 └── README.md
 
+## scripts 
+extract
+
+<img width="606" height="297" alt="extract" src="https://github.com/user-attachments/assets/7d4262c9-5683-4394-bd6e-922ac6ba801d" />
+
+transform
+
+<img width="832" height="971" alt="tranform" src="https://github.com/user-attachments/assets/8da5e308-12dd-4066-bb79-58b886dd016a" />
+
+load
+
+<img width="426" height="342" alt="load" src="https://github.com/user-attachments/assets/1ff68460-c5b7-4014-8b05-702291966cb5" />
+
 ## Validações
 - Remoção de duplicidades
 - Verificação de idade válida
 - Padronização de colunas
 - Conversão de tipos de dados
+
+  <img width="1202" height="621" alt="airflow4" src="https://github.com/user-attachments/assets/1e0d844c-4ad4-4a70-ae89-75a76cc94aa8" />
+
   
 ## Resultado
 Dados processados e armazenados em formato Parquet para consumo analítico.
