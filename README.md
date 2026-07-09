@@ -32,13 +32,17 @@ Credit Score Classification
 📋 Principais Características dos Dados
 Fonte Oficial:https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) Importei dos dados do CSV
 
-## Tecnologias para transformação dos dados
+#### Tecnologias Utilizadas
 - Python
+- Pandas
 - PySpark
-- Apache Spark
-- Kaggle API
+- Apache Airflow
+- Docker
 - AWS S3
-- Airflow
+- Power BI
+- GitHub
+- Parquet
+
   
 ## Estrutura
 Projeto_Final_ETL/
@@ -166,6 +170,44 @@ Gráficos:
 Outstanding Debt
 Monthly Balance
 Credit Utilization Ratio
+
+
+
+## Como Executar o Projeto
+
+### 1. Clonar o repositório
+
+git clone https://github.com/MirianCr/projeto-final-etl-credit-score.git
+
+### 2. Instalar dependências
+
+pip install -r requirements.txt
+
+### 3. Executar ETL localmente
+
+python scripts/extract.py
+
+python scripts/transform.py
+
+python scripts/load.py
+
+### 4. Executar com Airflow
+
+docker compose up -d
+
+Acessar:
+
+http://localhost:8080
+
+
+
+## Conclusão
+
+O projeto entregou um pipeline ETL automatizado capaz de extrair, transformar, validar e armazenar dados financeiros para análise de crédito.
+
+A solução foi implementada utilizando Python, Apache Airflow, Docker, AWS S3 e Power BI, seguindo boas práticas de Engenharia de Dados, qualidade dos dados e automação de processos.
+
+Os dados processados estão disponíveis em formato Parquet para consumo por dashboards analíticos e futuros modelos de Machine Learning.
 
 
 ## Respostas das Perguntas Norteadoras
