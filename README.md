@@ -29,16 +29,42 @@ Fonte Oficial:https://www.kaggle.com/docs/api#getting-started-installation-&-aut
 Projeto_Final_ETL/
 │
 ├── dags/
+
 ├── data/
+
 │   ├── raw/
+
 │   └── processed/
 │
+
 ├── scripts/
+
 │   ├── extract.py
+
 │   ├── transform.py
+
 │   └── load.py
+
+s3://data-girls-finance-mirian/
+
+├── raw/
+
+└── processed/
+
 │
 └── README.md
+
+
+Armazenamento em Nuvem (AWS S3)
+Foi criado um bucket AWS S3 chamado:
+
+data-girls-finance-mirian
+
+Os dados tratados foram armazenados na camada processed em formato Parquet, permitindo integração com ferramentas analíticas e futuras aplicações de Machine Learning.
+
+<img width="1907" height="906" alt="processedparquet" src="https://github.com/user-attachments/assets/f391487c-d540-4309-89df-990402010440" />
+
+
 
 ## scripts 
 extract
