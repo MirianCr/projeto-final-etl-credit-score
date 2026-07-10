@@ -8,28 +8,36 @@ Credit Score Classification
                                (Kaggle)
                                    │
                                    ▼
-                        Extract (CSV Local)
+                                
+                          Extract (CSV Local)
                                    │
                                    ▼
+                                   
                              Raw Layer
                          data/raw/train.csv
                                    │
                                    ▼
+                                   
                       Transform (PySpark/Pandas)
                                    │
                                    ▼
+                                   
                    Data Quality & Validation Layer
                                    │
                                    ▼
+                                   
                    Processed Layer (Parquet)
                                    │
                                    ▼
+                                   
                         AWS S3 Data Lake
                                    │
                                    ▼
+                                   
                              Power BI
 
 📋 Principais Características dos Dados
+
 Fonte Oficial:https://www.kaggle.com/docs/api#getting-started-installation-&-authentication) Importei dos dados do CSV
 
 #### Tecnologias Utilizadas
